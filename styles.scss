@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    nav{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 22vh;
+        background-color: black;
+        color: #fff;
+        .insight{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            width: 50%;
+            padding: 1rem 0;
+            height: 5vh;
+            span{
+                font-size: 15px;
+            }
+            :nth-child(1){
+                padding: 0 3rem;
+                border-right: 1px solid rgba(128, 128, 128, 0.493);
+            }
+            :nth-child(2){
+                padding: 0 1.5rem;
+                border-right: 1px solid rgba(128, 128, 128, 0.493);
+            }
+        }
+        .user-and-search{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 2rem 5rem;
+            width: 100%;
+            border-top: 1px solid rgba(128, 128, 128, 0.493);
+            input{
+                width: 20rem;
+                height: 2rem;
+                background-color: black;
+                border: 1px solid rgba(128, 128, 128, 0.493);
+                padding: 0.5rem;
+                font-size: 10px;
+                color: #fff;
+            }
+            .icons{
+                display: flex;
+                button{
+                    border-color: #fff;
+                    margin: 0 .5rem;
+                    width: 50px;
+                    background-color: black;
+                }
+            }
+        }
+        .products{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border-top: 1px solid rgba(128, 128, 128, 0.493);
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            p{
+                font-weight: bold;
+            }:hover{
+            cursor: pointer;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #fff;
+            }
+        }
+        
+    }
+}
