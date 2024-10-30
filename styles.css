@@ -260,38 +260,53 @@ main .lacoste-active .lacoste-banner .logo-lacoste p {
 main .lacoste-active .lacoste-banner .logo-lacoste :nth-child(1) {
   border-right: 1px solid #000;
 }
-main .recommended-for-you {
+main .list-items {
   display: flex;
   padding: 0 2rem;
   flex-direction: column;
 }
-main .recommended-for-you .first {
+main .list-items .first-title {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
 }
-main .recommended-for-you .first span {
+main .list-items .first-title span {
   font-weight: bold;
   font-size: 1.5rem;
 }
-main .recommended-for-you .recommended-clothes {
+main .list-items .items {
   display: flex;
+  align-items: center;
   padding: 0 1rem;
-  justify-content: space-around;
-  flex-direction: row;
-  /* background-color: #000000ef; */
+  width: 100%;
+  overflow: hidden;
   color: #000000;
 }
-main .recommended-for-you .recommended-clothes .recommended-image {
+main .list-items .items .seta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 10rem;
+  background-color: aqua;
+}
+main .list-items .items .seta button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+main .list-items .items .items-image {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  padding: 0 1rem;
+  position: relative;
 }
-main .recommended-for-you .recommended-clothes .recommended-image img {
+main .list-items .items .items-image img {
   display: flex;
   width: 30rem;
   background-color: #fff;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .buy-now {
+main .list-items .items .items-image .buy-now {
   display: flex;
   position: absolute;
   margin-top: 37rem;
@@ -302,29 +317,29 @@ main .recommended-for-you .recommended-clothes .recommended-image .buy-now {
   background-color: rgba(0, 0, 0, 0.9);
   z-index: -1;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .buy-now .hover-recommended {
+main .list-items .items .items-image .buy-now .hover-image {
   display: flex;
   flex-direction: row;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .buy-now .hover-recommended p {
+main .list-items .items .items-image .buy-now .hover-image p {
   padding: 0 1rem;
   font-size: 20px;
   border: 1px solid #fff;
   border-radius: 50px;
   cursor: pointer;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .buy-now .hover-recommended :hover {
+main .list-items .items .items-image .buy-now .hover-image :hover {
   background-color: #fff;
   color: #000;
   transition: 1s;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .buy-now .button-recommended {
+main .list-items .items .items-image .buy-now .button-image {
   display: flex;
   justify-content: center;
   align-self: center;
   padding: 1rem 0;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .buy-now .button-recommended button {
+main .list-items .items .items-image .buy-now .button-image button {
   width: 10rem;
   height: 3rem;
   color: #000;
@@ -332,35 +347,35 @@ main .recommended-for-you .recommended-clothes .recommended-image .buy-now .butt
   font-weight: bold;
   cursor: pointer;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .buy-now .button-recommended :hover {
+main .list-items .items .items-image .buy-now .button-image :hover {
   background-color: #08acec;
   transition: 1s;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .recommended-items {
+main .list-items .items .items-image .recommended-items {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .recommended-items .price {
+main .list-items .items .items-image .recommended-items .price {
   display: flex;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .recommended-items .price p {
+main .list-items .items .items-image .recommended-items .price p {
   text-decoration: line-through;
   padding: 0 0.5rem;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .recommended-items .price .low-price {
+main .list-items .items .items-image .recommended-items .price .low-price {
   font-size: 12px;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .recommended-items .price-pix {
+main .list-items .items .items-image .recommended-items .price-pix {
   display: flex;
 }
-main .recommended-for-you .recommended-clothes .recommended-image .recommended-items .price-pix p {
+main .list-items .items .items-image .recommended-items .price-pix p {
   color: green;
   font-weight: bold;
   font-size: 20px;
   padding-right: 0.5rem;
 }
-main .recommended-for-you .recommended-clothes :hover .buy-now {
+main .list-items .items :hover .buy-now {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -370,8 +385,40 @@ main .recommended-for-you .recommended-clothes :hover .buy-now {
   z-index: 100;
   transition: 1s;
 }
-main .recommended-for-you .recommended-clothes :hover .buy-now .hover-recommended {
+main .list-items .items :hover .buy-now .hover-image {
   display: flex;
   justify-content: center;
   align-self: center;
+}
+main .sneakers-shop {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.7882352941);
+}
+main .sneakers-shop img {
+  display: flex;
+  z-index: -1;
+  width: 100%;
+}
+main .sneakers-shop .banner {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 24%;
+  margin-left: 15rem;
+  margin-top: 15rem;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+main .sneakers-shop .banner span {
+  font-size: 18px;
+  letter-spacing: 0.5rem;
+}
+main .sneakers-shop .banner h1 {
+  font-size: 50px;
+}
+main .sneakers-shop .banner p {
+  font-size: 18px;
 }/*# sourceMappingURL=styles.css.map */
