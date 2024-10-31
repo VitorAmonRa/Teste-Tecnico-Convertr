@@ -264,6 +264,7 @@ main .list-items {
   display: flex;
   padding: 0 2rem;
   flex-direction: column;
+  margin-bottom: 3rem;
 }
 main .list-items .first-title {
   display: flex;
@@ -304,12 +305,13 @@ main .list-items .items .items-image {
 main .list-items .items .items-image img {
   display: flex;
   width: 30rem;
+  height: 40rem;
   background-color: #fff;
 }
 main .list-items .items .items-image .buy-now {
   display: flex;
   position: absolute;
-  margin-top: 37rem;
+  margin-top: 10rem;
   align-self: center;
   justify-content: center;
   flex-direction: column;
@@ -379,8 +381,8 @@ main .list-items .items :hover .buy-now {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 25.2%;
-  height: 35.8%;
+  width: 94.2%;
+  height: 33.5%;
   margin-top: 25rem;
   z-index: 100;
   transition: 1s;
@@ -421,4 +423,176 @@ main .sneakers-shop .banner h1 {
 }
 main .sneakers-shop .banner p {
   font-size: 18px;
+}
+main .attachments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 5rem;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+main .attachments .first-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #fff;
+}
+main .attachments .first-title h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+main .attachments .items {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+main .attachments .items .seta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 10rem;
+  background-color: aqua;
+}
+main .attachments .items .seta button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+main .attachments .items .items-image {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 0 1rem;
+  position: relative;
+}
+main .attachments .items .items-image img {
+  display: flex;
+  width: 30rem;
+  height: 40rem;
+  background-color: #fff;
+}
+main .attachments .items .items-image .buy-now {
+  display: flex;
+  position: absolute;
+  margin-top: 10rem;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+main .attachments .items .items-image .buy-now .hover-image {
+  display: flex;
+  flex-direction: row;
+}
+main .attachments .items .items-image .buy-now .hover-image p {
+  padding: 0 1rem;
+  font-size: 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+main .attachments .items .items-image .buy-now .hover-image :hover {
+  background-color: #fff;
+  color: #000;
+  transition: 1s;
+}
+main .attachments .items .items-image .buy-now .button-image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 1rem 0;
+}
+main .attachments .items .items-image .buy-now .button-image button {
+  width: 10rem;
+  height: 3rem;
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+main .attachments .items .items-image .buy-now .button-image :hover {
+  background-color: #08acec;
+  transition: 1s;
+}
+main .attachments .items .items-image .recommended-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+main .attachments .items .items-image .recommended-items .price {
+  display: flex;
+}
+main .attachments .items .items-image .recommended-items .price p {
+  text-decoration: line-through;
+  padding: 0 0.5rem;
+}
+main .attachments .items .items-image .recommended-items .price .low-price {
+  font-size: 12px;
+}
+main .attachments .items .items-image .recommended-items .price-pix {
+  display: flex;
+}
+main .attachments .items .items-image .recommended-items .price-pix p {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 0.5rem;
+}
+main .attachments .items :hover .buy-now {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 94.2%;
+  height: 33.5%;
+  margin-top: 25rem;
+  z-index: 100;
+  transition: 1s;
+}
+main .attachments .items :hover .buy-now .hover-image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+main .reviews {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+}
+main .reviews .first {
+  margin-bottom: 2rem;
+}
+main .reviews .text-box-reviews {
+  display: flex;
+  flex-direction: row;
+}
+main .reviews .text-box-reviews .text-box {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  padding: 2rem;
+  margin: 0 2rem;
+}
+main .reviews .buttons-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .reviews .buttons-slides input {
+  width: 1.5rem;
+  height: 0.8rem;
+  margin: 5rem 0.5rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3294117647);
+  border-color: rgba(0, 0, 0, 0.3294117647);
+}
+main .reviews .buttons-slides :focus {
+  background-color: rgba(0, 0, 0, 0.7803921569);
 }/*# sourceMappingURL=styles.css.map */
