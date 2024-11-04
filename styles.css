@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+* button {
+  cursor: pointer;
+}
 
 main {
   width: 100%;
@@ -62,7 +65,6 @@ main nav .user-and-search .icons {
   display: flex;
 }
 main nav .user-and-search .icons button {
-  border-color: #fff;
   margin: 0 0.5rem;
   width: 50px;
   background-color: black;
@@ -218,7 +220,7 @@ main .category .marcas p {
 main .lacoste-active {
   display: flex;
   width: 100%;
-  height: 70vh;
+  height: 86vh;
 }
 main .lacoste-active img {
   display: flex;
@@ -595,4 +597,207 @@ main .reviews .buttons-slides input {
 }
 main .reviews .buttons-slides :focus {
   background-color: rgba(0, 0, 0, 0.7803921569);
+}
+main .collab-mc-daniel {
+  display: flex;
+}
+main .collab-mc-daniel .banner {
+  display: flex;
+  flex-direction: row;
+}
+main .collab-mc-daniel .banner .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(223, 221, 221, 0.8470588235);
+}
+main .collab-mc-daniel .banner .text span {
+  letter-spacing: 0.2rem;
+  font-size: 12px;
+}
+main .collab-mc-daniel .banner .text h1 {
+  font-size: 50px;
+}
+main .collab-mc-daniel .banner .text p {
+  padding: 0 14rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main .collab-mc-daniel .banner .text button {
+  width: 10rem;
+  height: 3rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+main .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main .about .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 4rem 0;
+}
+main .about .text h1 {
+  font-size: 20px;
+  margin: 1rem 0;
+  text-align: center;
+}
+main .about .text p {
+  margin: 1rem 0;
+  color: rgba(0, 0, 0, 0.6039215686);
+}
+main .about .text span {
+  color: rgba(0, 0, 0, 0.6039215686);
+  text-align: center;
+  padding: 0 25rem;
+}
+main .newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+main .newsletter .send-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+main .newsletter .send-email h1 {
+  font-size: 24px;
+  padding: 1rem 0;
+}
+main .newsletter .send-email input {
+  display: flex;
+  border-bottom: 1px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 35rem;
+  background-color: #000;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  text-align: center;
+}
+main .newsletter .send-email .checkbox-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .newsletter .send-email .checkbox-input #checkbox {
+  display: flex;
+  width: 4rem;
+  background-color: #000;
+}
+main .newsletter .send-email button {
+  font-weight: bold;
+  width: 10rem;
+  height: 3rem;
+}
+main footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+main footer .footer {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+  width: 100%;
+}
+main footer .footer .talk-with-us {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .talk-with-us h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .talk-with-us p {
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+main footer .footer .tatuape-conceito {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .tatuape-conceito h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .tatuape-conceito p {
+  padding: 0.5rem 0;
+}
+main footer .footer .information {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .information h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .information p {
+  padding: 0.5rem 0;
+}
+main footer .footer .adress {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6rem;
+}
+main footer .footer .adress .adress-text {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+main footer .footer .adress .adress-text h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .adress .adress-text p {
+  padding: 0.5rem 0;
+}
+main footer .footer .adress .buttons {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+main footer .footer .adress .buttons label {
+  padding-right: 1rem;
+}
+main footer .footer .adress .buttons span {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+main footer .footer .icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 22rem;
+}
+main footer .copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main footer .copy p {
+  margin-bottom: 5rem;
 }/*# sourceMappingURL=styles.css.map */
