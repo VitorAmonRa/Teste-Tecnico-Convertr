@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+* button {
+  cursor: pointer;
+}
 
 main {
   width: 100%;
@@ -62,7 +65,9 @@ main nav .user-and-search .icons {
   display: flex;
 }
 main nav .user-and-search .icons button {
-  border-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 0.5rem;
   width: 50px;
   background-color: black;
@@ -156,17 +161,35 @@ main .category {
 main .category .first {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 main .category .first span {
   font-weight: bold;
   font-size: 1.5rem;
+}
+main .category .first .arrow {
+  display: flex;
+  flex-direction: row;
+  gap: 0 4rem;
+}
+main .category .first .arrow button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  border: 0;
+}
+main .category .first .arrow button img {
+  width: 15px;
 }
 main .category .category-clothes {
   display: flex;
   padding: 0 1rem;
   justify-content: space-between;
   flex-direction: row;
+  overflow: hidden;
+  gap: 3rem;
 }
 main .category .category-clothes .image-category {
   display: flex;
@@ -214,11 +237,12 @@ main .category .marcas p {
   padding: 0 2rem;
   font-size: 20px;
   font-weight: bold;
+  color: rgba(53, 53, 53, 0.5137254902);
 }
 main .lacoste-active {
   display: flex;
   width: 100%;
-  height: 70vh;
+  height: 86vh;
 }
 main .lacoste-active img {
   display: flex;
@@ -256,9 +280,10 @@ main .lacoste-active .lacoste-banner .logo-lacoste {
 }
 main .lacoste-active .lacoste-banner .logo-lacoste p {
   padding: 0 1rem;
+  border-left: 1px solid #000;
 }
-main .lacoste-active .lacoste-banner .logo-lacoste :nth-child(1) {
-  border-right: 1px solid #000;
+main .lacoste-active .lacoste-banner .logo-lacoste span {
+  padding: 0 1rem;
 }
 main .list-items {
   display: flex;
@@ -285,21 +310,22 @@ main .list-items .items {
 }
 main .list-items .items .seta {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 10rem;
+  position: absolute;
+  left: 115rem;
   background-color: aqua;
 }
 main .list-items .items .seta button {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  color: #fff;
 }
 main .list-items .items .items-image {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  padding: 0 1rem;
+  margin: 0 1rem;
   position: relative;
 }
 main .list-items .items .items-image img {
@@ -381,7 +407,7 @@ main .list-items .items :hover .buy-now {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 94.2%;
+  width: 100%;
   height: 33.5%;
   margin-top: 25rem;
   z-index: 100;
@@ -448,27 +474,29 @@ main .attachments .items {
   display: flex;
   align-items: center;
   padding: 0 1rem;
+  gap: 1rem;
   width: 100%;
   overflow: hidden;
   color: #fff;
 }
 main .attachments .items .seta {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 10rem;
+  position: absolute;
+  left: 115rem;
   background-color: aqua;
 }
 main .attachments .items .seta button {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid #fff;
+  color: #fff;
 }
 main .attachments .items .items-image {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  padding: 0 1rem;
   position: relative;
 }
 main .attachments .items .items-image img {
@@ -550,8 +578,8 @@ main .attachments .items :hover .buy-now {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 94.2%;
-  height: 33.5%;
+  width: 100%;
+  height: 33.6%;
   margin-top: 25rem;
   z-index: 100;
   transition: 1s;
@@ -580,6 +608,9 @@ main .reviews .text-box-reviews .text-box {
   padding: 2rem;
   margin: 0 2rem;
 }
+main .reviews .text-box-reviews .text-box .user-name {
+  font-weight: bold;
+}
 main .reviews .buttons-slides {
   display: flex;
   align-items: center;
@@ -595,4 +626,217 @@ main .reviews .buttons-slides input {
 }
 main .reviews .buttons-slides :focus {
   background-color: rgba(0, 0, 0, 0.7803921569);
+}
+main .collab-mc-daniel {
+  display: flex;
+}
+main .collab-mc-daniel .banner {
+  display: flex;
+  flex-direction: row;
+}
+main .collab-mc-daniel .banner .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(223, 221, 221, 0.8470588235);
+}
+main .collab-mc-daniel .banner .text span {
+  letter-spacing: 0.2rem;
+  font-size: 12px;
+}
+main .collab-mc-daniel .banner .text h1 {
+  font-size: 50px;
+}
+main .collab-mc-daniel .banner .text p {
+  padding: 0 14rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main .collab-mc-daniel .banner .text button {
+  width: 10rem;
+  height: 3rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+main .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main .about .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 4rem 0;
+}
+main .about .text h1 {
+  font-size: 20px;
+  margin: 1rem 0;
+  text-align: center;
+}
+main .about .text p {
+  margin: 1rem 0;
+  color: rgba(0, 0, 0, 0.6039215686);
+}
+main .about .text span {
+  color: rgba(0, 0, 0, 0.6039215686);
+  text-align: center;
+  padding: 0 25rem;
+}
+main .newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+main .newsletter .send-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+main .newsletter .send-email h1 {
+  font-size: 24px;
+  padding: 1rem 0;
+}
+main .newsletter .send-email input {
+  display: flex;
+  border-bottom: 1px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 35rem;
+  background-color: #000;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  text-align: center;
+}
+main .newsletter .send-email .checkbox-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .newsletter .send-email .checkbox-input #checkbox {
+  display: flex;
+  width: 4rem;
+  background-color: #000;
+}
+main .newsletter .send-email button {
+  font-weight: bold;
+  width: 10rem;
+  height: 3rem;
+}
+main footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+main footer .footer {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+  width: 100%;
+}
+main footer .footer .talk-with-us {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .talk-with-us h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .talk-with-us span {
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .talk-with-us p {
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .tatuape-conceito {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .tatuape-conceito h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .tatuape-conceito span {
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .tatuape-conceito p {
+  padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .information {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .information h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .information p {
+  padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .adress {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6rem;
+}
+main footer .footer .adress .adress-text {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+main footer .footer .adress .adress-text h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .adress .adress-text p {
+  padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .adress .buttons {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+main footer .footer .adress .buttons label {
+  padding-right: 1rem;
+}
+main footer .footer .adress .buttons span {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+main footer .footer .icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 22rem;
+}
+main footer .copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main footer .copy p {
+  margin-bottom: 5rem;
 }/*# sourceMappingURL=styles.css.map */
