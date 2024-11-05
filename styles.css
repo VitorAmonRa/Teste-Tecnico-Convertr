@@ -65,6 +65,9 @@ main nav .user-and-search .icons {
   display: flex;
 }
 main nav .user-and-search .icons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 0.5rem;
   width: 50px;
   background-color: black;
@@ -158,17 +161,35 @@ main .category {
 main .category .first {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 main .category .first span {
   font-weight: bold;
   font-size: 1.5rem;
+}
+main .category .first .arrow {
+  display: flex;
+  flex-direction: row;
+  gap: 0 4rem;
+}
+main .category .first .arrow button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  border: 0;
+}
+main .category .first .arrow button img {
+  width: 15px;
 }
 main .category .category-clothes {
   display: flex;
   padding: 0 1rem;
   justify-content: space-between;
   flex-direction: row;
+  overflow: hidden;
+  gap: 3rem;
 }
 main .category .category-clothes .image-category {
   display: flex;
@@ -216,6 +237,7 @@ main .category .marcas p {
   padding: 0 2rem;
   font-size: 20px;
   font-weight: bold;
+  color: rgba(53, 53, 53, 0.5137254902);
 }
 main .lacoste-active {
   display: flex;
@@ -258,9 +280,10 @@ main .lacoste-active .lacoste-banner .logo-lacoste {
 }
 main .lacoste-active .lacoste-banner .logo-lacoste p {
   padding: 0 1rem;
+  border-left: 1px solid #000;
 }
-main .lacoste-active .lacoste-banner .logo-lacoste :nth-child(1) {
-  border-right: 1px solid #000;
+main .lacoste-active .lacoste-banner .logo-lacoste span {
+  padding: 0 1rem;
 }
 main .list-items {
   display: flex;
@@ -287,21 +310,22 @@ main .list-items .items {
 }
 main .list-items .items .seta {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 10rem;
+  position: absolute;
+  left: 115rem;
   background-color: aqua;
 }
 main .list-items .items .seta button {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  color: #fff;
 }
 main .list-items .items .items-image {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  padding: 0 1rem;
+  margin: 0 1rem;
   position: relative;
 }
 main .list-items .items .items-image img {
@@ -383,7 +407,7 @@ main .list-items .items :hover .buy-now {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 94.2%;
+  width: 100%;
   height: 33.5%;
   margin-top: 25rem;
   z-index: 100;
@@ -450,27 +474,29 @@ main .attachments .items {
   display: flex;
   align-items: center;
   padding: 0 1rem;
+  gap: 1rem;
   width: 100%;
   overflow: hidden;
   color: #fff;
 }
 main .attachments .items .seta {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  max-height: 10rem;
+  position: absolute;
+  left: 115rem;
   background-color: aqua;
 }
 main .attachments .items .seta button {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid #fff;
+  color: #fff;
 }
 main .attachments .items .items-image {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  padding: 0 1rem;
   position: relative;
 }
 main .attachments .items .items-image img {
@@ -552,8 +578,8 @@ main .attachments .items :hover .buy-now {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 94.2%;
-  height: 33.5%;
+  width: 100%;
+  height: 33.6%;
   margin-top: 25rem;
   z-index: 100;
   transition: 1s;
@@ -581,6 +607,9 @@ main .reviews .text-box-reviews .text-box {
   width: 25rem;
   padding: 2rem;
   margin: 0 2rem;
+}
+main .reviews .text-box-reviews .text-box .user-name {
+  font-weight: bold;
 }
 main .reviews .buttons-slides {
   display: flex;
@@ -729,9 +758,13 @@ main footer .footer .talk-with-us h1 {
   font-size: 20px;
   padding: 1rem 0;
 }
+main footer .footer .talk-with-us span {
+  color: rgba(109, 109, 109, 0.8549019608);
+}
 main footer .footer .talk-with-us p {
   padding-bottom: 0.5rem;
   padding-top: 1rem;
+  color: rgba(109, 109, 109, 0.8549019608);
 }
 main footer .footer .tatuape-conceito {
   display: flex;
@@ -742,8 +775,12 @@ main footer .footer .tatuape-conceito h1 {
   font-size: 20px;
   padding: 1rem 0;
 }
+main footer .footer .tatuape-conceito span {
+  color: rgba(109, 109, 109, 0.8549019608);
+}
 main footer .footer .tatuape-conceito p {
   padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
 }
 main footer .footer .information {
   display: flex;
@@ -756,6 +793,7 @@ main footer .footer .information h1 {
 }
 main footer .footer .information p {
   padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
 }
 main footer .footer .adress {
   display: flex;
@@ -773,6 +811,7 @@ main footer .footer .adress .adress-text h1 {
 }
 main footer .footer .adress .adress-text p {
   padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
 }
 main footer .footer .adress .buttons {
   display: flex;
