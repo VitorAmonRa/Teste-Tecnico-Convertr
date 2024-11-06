@@ -137,8 +137,9 @@ main{
             }
         }
     }
-    /* .slides{
-        display: grid;
+    .slides{
+        display: flex;
+        flex-direction: row;
         position: absolute;
         align-items: center;
         justify-content: center;
@@ -147,17 +148,19 @@ main{
         width: 100%;
         .slides-button{ 
             display: flex;
+            flex-direction: row;
             margin:  0 1rem;
             width: 14rem;
             height: .5rem;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(97, 96, 96, 0.5);
+            border: 1px solid #fff;
             cursor: pointer;
 
         }:hover{
             background-color: #fff;
             transition: 1s;
         }
-    } */
+    }
     .category{
         display: flex;
         padding: 0 2rem;
@@ -470,6 +473,14 @@ main{
             p{
                 font-size: 18px;
             }
+            button{
+                width: 10rem;
+                height: 3rem;
+                font-weight: bold;
+                background-color: #000;
+                color: #fff;
+                border: none;
+            }
         }
     }
     .attachments{
@@ -623,6 +634,7 @@ main{
        .text-box-reviews{
         display: flex;
         flex-direction: row;
+        overflow: hidden;
             .text-box{
                 display: flex;
                 flex-direction: column;
@@ -651,7 +663,9 @@ main{
        }
     }
     .collab-mc-daniel{
-        display: flex;
+        /* display: flex; */
+        transition: 2s;
+
         .banner{
             display: flex;
             flex-direction: row;
@@ -681,6 +695,17 @@ main{
                     color: #fff;
                     font-weight: bold;
                     border: none;
+                }
+            }
+            /*1026  */
+            @media (max-width: 1554px){
+                img{
+                    width: 130%;
+                    
+                }
+                .text{
+                background-color: #dfdddd;
+
                 }
             }
         }
@@ -770,6 +795,7 @@ main{
             flex-direction: row;
             padding: 4rem ;
             width: 100%;
+            overflow: hidden;
             .talk-with-us{
                 display: flex;
                 flex-direction: column;
