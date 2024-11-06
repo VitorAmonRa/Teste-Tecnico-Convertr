@@ -1,0 +1,890 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* button {
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  height: 100vh;
+}
+main nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 22vh;
+  background-color: black;
+  color: #fff;
+}
+main nav .insight {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+  padding: 1rem 0;
+  height: 5vh;
+}
+main nav .insight span {
+  font-size: 15px;
+}
+main nav .insight :nth-child(1) {
+  padding: 0 3rem;
+  border-right: 1px solid rgba(128, 128, 128, 0.493);
+}
+main nav .insight :nth-child(2) {
+  padding: 0 1.5rem;
+  border-right: 1px solid rgba(128, 128, 128, 0.493);
+}
+main nav .user-and-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  width: 100%;
+  border-top: 1px solid rgba(128, 128, 128, 0.493);
+}
+main nav .user-and-search input {
+  width: 20rem;
+  height: 2rem;
+  background-color: black;
+  border: 1px solid rgba(128, 128, 128, 0.493);
+  padding: 0.5rem;
+  font-size: 10px;
+  color: #fff;
+}
+main nav .user-and-search .icons {
+  display: flex;
+}
+main nav .user-and-search .icons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  width: 50px;
+  background-color: black;
+  border: none;
+}
+main nav .products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.493);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+main nav .products p {
+  font-weight: bold;
+}
+main nav .products :hover {
+  cursor: pointer;
+  border-bottom: 3px solid #fff;
+}
+main .main-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .main-banner .banner {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+main .main-banner .banner img {
+  z-index: -1;
+  grid-area: 1/1;
+  width: 100%;
+}
+main .main-banner .banner h1 {
+  font-size: 50px;
+  grid-area: 1/1;
+  justify-self: normal;
+  align-self: center;
+  margin-top: 3rem;
+  margin-left: 24rem;
+}
+main .main-banner .banner span {
+  grid-area: 1/1;
+  flex-direction: column;
+  justify-self: flex-start;
+  align-self: flex-end;
+  margin-bottom: 14rem;
+  margin-left: 21rem;
+}
+main .main-banner .banner span:nth-child(1) {
+  font-size: 3rem;
+  font-weight: bold;
+}
+main .main-banner .banner span:nth-child(2) {
+  font-size: 18px;
+}
+main .main-banner .banner button {
+  grid-area: 1/1;
+  justify-self: flex-start;
+  align-self: flex-end;
+  margin-left: 28rem;
+  font-weight: bold;
+  margin-bottom: 10rem;
+  background-color: #000;
+  color: #fff;
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+}
+main .slides {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  top: 80%;
+  width: 100%;
+}
+main .slides .slides-button {
+  display: flex;
+  flex-direction: row;
+  margin: 0 1rem;
+  width: 14rem;
+  height: 0.5rem;
+  background-color: rgba(97, 96, 96, 0.5);
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+main .slides :hover {
+  background-color: #fff;
+  transition: 1s;
+}
+main .category {
+  display: flex;
+  padding: 0 2rem;
+  width: 100%;
+  flex-direction: column;
+}
+main .category .first {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+main .category .first span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+main .category .first .arrow {
+  display: flex;
+  flex-direction: row;
+  gap: 0 4rem;
+}
+main .category .first .arrow button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  border: 0;
+}
+main .category .first .arrow button img {
+  width: 15px;
+}
+main .category .category-clothes {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  overflow: hidden;
+  gap: 3rem;
+}
+main .category .category-clothes .image-category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+main .category .category-clothes .image-category .image-div {
+  display: grid;
+  width: 100%;
+  height: 100%;
+}
+main .category .category-clothes .image-category .image-div img {
+  grid-area: 1/1;
+  /* width: 100%; */
+  height: 100%;
+}
+main .category .category-clothes .image-category .image-div .buy-now {
+  grid-area: 1/1;
+  background-color: aqua;
+  justify-self: end;
+  align-self: end;
+}
+main .category .category-clothes .image-category .image-div .buy-now button {
+  grid-area: 1/1;
+  width: 10rem;
+  height: 3rem;
+  color: #fff;
+  background: linear-gradient(45deg, rgba(250, 249, 249, 0.9333333333), #000, #000, #000, #000, #000, #000, #000, #000);
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+main .category .category-clothes .image-category .category-items {
+  display: flex;
+  margin-top: 1rem;
+  font-size: 20px;
+  font-weight: bold;
+}
+main .category .category-clothes .image-category .category-items p {
+  border-bottom: 1px solid #000;
+}
+main .category .marcas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+  padding: 1rem 2rem;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+main .category .marcas p {
+  padding: 0 2rem;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(53, 53, 53, 0.5137254902);
+}
+main .lacoste-active {
+  display: flex;
+  width: 100%;
+  height: 86vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+main .lacoste-active img {
+  display: flex;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  background-size: cover;
+}
+main .lacoste-active .lacoste-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 40%;
+  padding: 1rem 0;
+}
+main .lacoste-active .lacoste-banner h1 {
+  font-size: 30px;
+  margin: 0.6rem 0;
+}
+main .lacoste-active .lacoste-banner p {
+  margin-bottom: 0.6rem;
+}
+main .lacoste-active .lacoste-banner button {
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+}
+main .lacoste-active .lacoste-banner .logo-lacoste {
+  display: flex;
+  padding: 0 1rem;
+}
+main .lacoste-active .lacoste-banner .logo-lacoste p {
+  padding: 0 1rem;
+  border-left: 1px solid #000;
+}
+main .lacoste-active .lacoste-banner .logo-lacoste span {
+  padding: 0 1rem;
+}
+main .list-items {
+  display: flex;
+  padding: 0 2rem;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+main .list-items .first-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+main .list-items .first-title span {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+main .list-items .items {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  overflow: hidden;
+  color: #000000;
+}
+main .list-items .items .seta {
+  display: flex;
+  position: absolute;
+  left: 115rem;
+  background-color: aqua;
+}
+main .list-items .items .seta button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  color: #fff;
+}
+main .list-items .items .items-image {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 0 1rem;
+  position: relative;
+}
+main .list-items .items .items-image img {
+  display: flex;
+  width: 30rem;
+  height: 40rem;
+  background-color: #fff;
+}
+main .list-items .items .items-image .buy-now {
+  display: flex;
+  position: absolute;
+  margin-top: 10rem;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+main .list-items .items .items-image .buy-now .hover-image {
+  display: flex;
+  flex-direction: row;
+}
+main .list-items .items .items-image .buy-now .hover-image p {
+  padding: 0 1rem;
+  font-size: 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+main .list-items .items .items-image .buy-now .hover-image :hover {
+  background-color: #fff;
+  color: #000;
+  transition: 1s;
+}
+main .list-items .items .items-image .buy-now .button-image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 1rem 0;
+}
+main .list-items .items .items-image .buy-now .button-image button {
+  width: 10rem;
+  height: 3rem;
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+main .list-items .items .items-image .buy-now .button-image :hover {
+  background-color: #08acec;
+  transition: 1s;
+}
+main .list-items .items .items-image .recommended-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+main .list-items .items .items-image .recommended-items .price {
+  display: flex;
+}
+main .list-items .items .items-image .recommended-items .price p {
+  text-decoration: line-through;
+  padding: 0 0.5rem;
+}
+main .list-items .items .items-image .recommended-items .price .low-price {
+  font-size: 12px;
+}
+main .list-items .items .items-image .recommended-items .price-pix {
+  display: flex;
+}
+main .list-items .items .items-image .recommended-items .price-pix p {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 0.5rem;
+}
+main .list-items .items :hover .buy-now {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  height: 33.5%;
+  margin-top: 25rem;
+  z-index: 100;
+  transition: 1s;
+}
+main .list-items .items :hover .buy-now .hover-image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+main .sneakers-shop {
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  background-color: rgba(0, 0, 0, 0.7882352941);
+}
+main .sneakers-shop img {
+  display: flex;
+  z-index: -1;
+  width: 100%;
+}
+main .sneakers-shop .banner {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 24%;
+  margin-left: 15rem;
+  margin-top: 15rem;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+main .sneakers-shop .banner span {
+  font-size: 18px;
+  letter-spacing: 0.5rem;
+}
+main .sneakers-shop .banner h1 {
+  font-size: 50px;
+}
+main .sneakers-shop .banner p {
+  font-size: 18px;
+}
+main .sneakers-shop .banner button {
+  width: 10rem;
+  height: 3rem;
+  font-weight: bold;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+main .attachments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 5rem;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+main .attachments .first-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  color: #fff;
+}
+main .attachments .first-title h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+main .attachments .items {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+}
+main .attachments .items .seta {
+  display: flex;
+  position: absolute;
+  left: 115rem;
+  background-color: aqua;
+}
+main .attachments .items .seta button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid #fff;
+  color: #fff;
+}
+main .attachments .items .items-image {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  position: relative;
+}
+main .attachments .items .items-image img {
+  display: flex;
+  width: 30rem;
+  height: 40rem;
+  background-color: #fff;
+}
+main .attachments .items .items-image .buy-now {
+  display: flex;
+  position: absolute;
+  margin-top: 10rem;
+  align-self: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+main .attachments .items .items-image .buy-now .hover-image {
+  display: flex;
+  flex-direction: row;
+}
+main .attachments .items .items-image .buy-now .hover-image p {
+  padding: 0 1rem;
+  font-size: 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+main .attachments .items .items-image .buy-now .hover-image :hover {
+  background-color: #fff;
+  color: #000;
+  transition: 1s;
+}
+main .attachments .items .items-image .buy-now .button-image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 1rem 0;
+}
+main .attachments .items .items-image .buy-now .button-image button {
+  width: 10rem;
+  height: 3rem;
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+main .attachments .items .items-image .buy-now .button-image :hover {
+  background-color: #08acec;
+  transition: 1s;
+}
+main .attachments .items .items-image .recommended-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+main .attachments .items .items-image .recommended-items .price {
+  display: flex;
+}
+main .attachments .items .items-image .recommended-items .price p {
+  text-decoration: line-through;
+  padding: 0 0.5rem;
+}
+main .attachments .items .items-image .recommended-items .price .low-price {
+  font-size: 12px;
+}
+main .attachments .items .items-image .recommended-items .price-pix {
+  display: flex;
+}
+main .attachments .items .items-image .recommended-items .price-pix p {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 0.5rem;
+}
+main .attachments .items :hover .buy-now {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  height: 33.6%;
+  margin-top: 25rem;
+  z-index: 100;
+  transition: 1s;
+}
+main .attachments .items :hover .buy-now .hover-image {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+main .reviews {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem;
+}
+main .reviews .first {
+  margin-bottom: 2rem;
+}
+main .reviews .text-box-reviews {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+main .reviews .text-box-reviews .text-box {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  padding: 2rem;
+  margin: 0 2rem;
+}
+main .reviews .text-box-reviews .text-box .user-name {
+  font-weight: bold;
+}
+main .reviews .buttons-slides {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .reviews .buttons-slides input {
+  width: 1.5rem;
+  height: 0.8rem;
+  margin: 5rem 0.5rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3294117647);
+  border-color: rgba(0, 0, 0, 0.3294117647);
+}
+main .reviews .buttons-slides :focus {
+  background-color: rgba(0, 0, 0, 0.7803921569);
+}
+main .collab-mc-daniel {
+  /* display: flex; */
+  transition: 2s;
+}
+main .collab-mc-daniel .banner {
+  display: flex;
+  flex-direction: row;
+  /*1026  */
+}
+main .collab-mc-daniel .banner .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(223, 221, 221, 0.8470588235);
+}
+main .collab-mc-daniel .banner .text span {
+  letter-spacing: 0.2rem;
+  font-size: 12px;
+}
+main .collab-mc-daniel .banner .text h1 {
+  font-size: 50px;
+}
+main .collab-mc-daniel .banner .text p {
+  padding: 0 14rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main .collab-mc-daniel .banner .text button {
+  width: 10rem;
+  height: 3rem;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+@media (max-width: 1554px) {
+  main .collab-mc-daniel .banner img {
+    width: 130%;
+  }
+  main .collab-mc-daniel .banner .text {
+    background-color: #dfdddd;
+  }
+}
+main .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main .about .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 4rem 0;
+}
+main .about .text h1 {
+  font-size: 20px;
+  margin: 1rem 0;
+  text-align: center;
+}
+main .about .text p {
+  margin: 1rem 0;
+  color: rgba(0, 0, 0, 0.6039215686);
+}
+main .about .text span {
+  color: rgba(0, 0, 0, 0.6039215686);
+  text-align: center;
+  padding: 0 25rem;
+}
+main .newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+}
+main .newsletter .send-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+main .newsletter .send-email h1 {
+  font-size: 24px;
+  padding: 1rem 0;
+}
+main .newsletter .send-email input {
+  display: flex;
+  border-bottom: 1px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 35rem;
+  background-color: #000;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  text-align: center;
+}
+main .newsletter .send-email .checkbox-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .newsletter .send-email .checkbox-input #checkbox {
+  display: flex;
+  width: 4rem;
+  background-color: #000;
+}
+main .newsletter .send-email button {
+  font-weight: bold;
+  width: 10rem;
+  height: 3rem;
+}
+main footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+main footer .footer {
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+  width: 100%;
+  overflow: hidden;
+}
+main footer .footer .talk-with-us {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .talk-with-us h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .talk-with-us span {
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .talk-with-us p {
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .tatuape-conceito {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .tatuape-conceito h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .tatuape-conceito span {
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .tatuape-conceito p {
+  padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .information {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3rem;
+}
+main footer .footer .information h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .information p {
+  padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .adress {
+  display: flex;
+  flex-direction: column;
+  padding: 0 6rem;
+}
+main footer .footer .adress .adress-text {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+main footer .footer .adress .adress-text h1 {
+  font-size: 20px;
+  padding: 1rem 0;
+}
+main footer .footer .adress .adress-text p {
+  padding: 0.5rem 0;
+  color: rgba(109, 109, 109, 0.8549019608);
+}
+main footer .footer .adress .buttons {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+main footer .footer .adress .buttons label {
+  padding-right: 1rem;
+}
+main footer .footer .adress .buttons span {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+main footer .footer .icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 22rem;
+}
+main footer .copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+main footer .copy p {
+  margin-bottom: 5rem;
+}/*# sourceMappingURL=styles.css.map */
