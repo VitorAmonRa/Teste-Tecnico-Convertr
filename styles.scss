@@ -88,45 +88,57 @@ main{
     }
     .main-banner{
         display: flex;
-        width: 100%;
+        align-items: center;
+        justify-content: center;
         background-color: rgba(0, 0, 0, 0.5);
         .banner{
-            display: flex;
-            position: absolute;
-            flex-direction: column;
-            margin-left: 04rem;
-            margin-top: 22rem;
-            justify-content: center;
-            align-items: center;
-        }span{
+            display: grid;
+            width: 100%;
+            height: 100%;
             color: #fff;
-            }span:nth-child(1){
-                font-size: 3rem;
-                font-weight: bold;
-            }span:nth-child(2){
-                font-size: 18px;
+            img{
+                z-index: -1;
+                grid-area: 1/1;
+                width: 100%;
             }
+            h1{
+                font-size: 50px;
+                grid-area: 1/1;
+                justify-self: normal;
+                align-self: center;
+                margin-top: 3rem;
+                margin-left: 24rem;
+            }
+            span{
+                grid-area: 1/1;
+                flex-direction: column;
+                justify-self: flex-start;
+                align-self: flex-end;
+                margin-bottom: 14rem;
+                margin-left: 21rem;
+                }span:nth-child(1){
+                    font-size: 3rem;
+                    font-weight: bold;
+                }span:nth-child(2){
+                    font-size: 18px;
+                }
             button{
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                grid-area: 1 / 1;
+                justify-self: flex-start;
+                align-self: flex-end;
+                margin-left: 28rem;
                 font-weight: bold;
-                margin-top: 1.5rem;
+                margin-bottom: 10rem;
                 background-color: #000;
                 color: #fff;
                 width: 10rem;
                 height: 3rem;
                 cursor: pointer;
             }
-        img{
-            display: flex;
-            z-index: -1;
-            width: 100%;
-            background-size: cover;
         }
     }
-    .slides{
-        display: flex;
+    /* .slides{
+        display: grid;
         position: absolute;
         align-items: center;
         justify-content: center;
@@ -145,7 +157,7 @@ main{
             background-color: #fff;
             transition: 1s;
         }
-    }
+    } */
     .category{
         display: flex;
         padding: 0 2rem;
@@ -177,33 +189,45 @@ main{
         }
     }.category-clothes{
         display: flex;
+        position: relative;
+        align-items: center; 
+        width: 100%;
         padding: 0 1rem;
-        justify-content: space-between;
-        flex-direction: row;
         overflow: hidden;
         gap: 3rem;
         .image-category{
             display: flex;
             flex-direction: column;
-            img{
-                width: 30rem;
-                height: 37rem;
-            }
-            .buy-now{
-                display: flex;
-                position: absolute;
-                margin-left: 20rem;
-                margin-top: 34rem;
-                align-self: center;
-                button{
-                    width: 10rem;
-                    height: 3rem;
-                    color: #000;
-                    background-color: #fff;
-                    font-weight: bold;
-                    cursor: pointer;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            .image-div{
+                display: grid;
+                width: 100%;
+                height: 100%;
+                img{
+                    grid-area: 1/1;
+                    /* width: 100%; */
+                    height: 100%;
+                }
+                .buy-now{
+                    grid-area: 1/1;
+                    background-color: aqua;
+                    justify-self: end;
+                    align-self: end;
+                    button{
+                        grid-area: 1/1;
+                        width: 10rem;
+                        height: 3rem;
+                        color: #fff;
+                        background: linear-gradient(45deg, #faf9f9ee,#000,#000,#000,#000,#000,#000,#000,#000);
+                        font-weight: bold;
+                        border: none;
+                        cursor: pointer;
+                    }
                 }
             }
+            
             .category-items{
                 display: flex;
                 margin-top: 1rem;
@@ -237,6 +261,8 @@ main{
         display: flex;
         width: 100%;
         height: 86vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
         img{
             display: flex;
             position: relative;
