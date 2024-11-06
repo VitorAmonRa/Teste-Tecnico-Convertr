@@ -71,6 +71,7 @@ main nav .user-and-search .icons button {
   margin: 0 0.5rem;
   width: 50px;
   background-color: black;
+  border: none;
 }
 main nav .products {
   display: flex;
